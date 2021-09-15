@@ -15,4 +15,7 @@ Enable应用案例库
 - [Python示例 - 部署PyTorch模型](https://github.com/NoteBene/enable-examples/tree/main/Applications/Pytorch-web-app)
 - [Python示例 - IoT设备数据转发至企业微信](https://github.com/NoteBene/enable-examples/tree/main/Applications/Python-post)
 
+## 友情提示
 
+- [Docker安装方法](https://www.runoob.com/docker/docker-tutorial.html)
+- [Docker常用命令](https://github.com/NoteBene/enable-examples/blob/main/other/Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md)
