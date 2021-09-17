@@ -82,4 +82,4 @@ webhook-python       latest    0a477027a038     8 seconds ago      136MB
 
 若一切顺利，则能在将设备状态数据转发至指定url。
 
-![](https://main.qcloudimg.com/raw/2d132feae5a6a1467e00fcb8b035767c.png)
+![](https://main.qcloudimg.com/raw/daccb90ad7683a7329054ac6a5bf20f0.png)
