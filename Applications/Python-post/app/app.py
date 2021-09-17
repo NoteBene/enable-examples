@@ -41,13 +41,19 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(data.encode('utf-8'))
 
     def explorerHandle(self, body):#处理数据函数
+        # 设置发送内容content
+        json_data = json.loads(body.decode('utf-8'))
+        params = json_data['payload']['params']
+        content = "设备：<font color=\"warning\">" + json_data["devicename"] + "</font> 更新为以下状态：\n" 
+        for i in params:
+            content =  content + ">" + i + "：<font color=\"comment\">" + str(params[i]) + "</font> \n"
         # 设置目标地址
-        url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=*********'
+        url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=*********************'
         headers = {"Content-Type": "application/json;charset=UTF-8"}
         d = {
-              "msgtype": "text",
-              "text": {
-                "content": body.decode('utf-8')
+              "msgtype": "markdown",
+              "markdown": {
+                "content": content
               }
             }
         # 转发至目标地址
