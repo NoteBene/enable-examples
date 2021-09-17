@@ -15,7 +15,7 @@
         for i in params:
             content =  content + ">" + i + "：<font color=\"comment\">" + str(params[i]) + "</font> \n"
         # 设置目标地址
-        url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=4151288c-bcd1-4faa-801a-965930dfca16'
+        url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=******************'
         headers = {"Content-Type": "application/json;charset=UTF-8"}
         d = {
               "msgtype": "markdown",
