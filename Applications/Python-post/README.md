@@ -7,18 +7,24 @@
 编辑`app/app.py`文件中`explorerHandle(self, body)`函数的目标地址。可设置为企业微信机器Webhook地址或其他地址。
 
 ```python
-def explorerHandle(self, body):#处理数据函数
-    # 设置目标地址
-    url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=*********'
-    headers = {"Content-Type": "application/json;charset=UTF-8"}
-    d = {
-        "msgtype": "text",
-        "text": {
-            "content": body.decode('utf-8')
-        }
-    }
-    # 转发至目标地址
-    r = requests.post(url, headers=headers, data=json.dumps(d))
+    def explorerHandle(self, body):#处理数据函数
+        # 设置发送内容content
+        json_data = json.loads(body.decode('utf-8'))
+        params = json_data['payload']['params']
+        content = "设备：<font color=\"warning\">" + json_data["devicename"] + "</font> 更新为以下状态：\n" 
+        for i in params:
+            content =  content + ">" + i + "：<font color=\"comment\">" + str(params[i]) + "</font> \n"
+        # 设置目标地址
+        url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=4151288c-bcd1-4faa-801a-965930dfca16'
+        headers = {"Content-Type": "application/json;charset=UTF-8"}
+        d = {
+              "msgtype": "markdown",
+              "markdown": {
+                "content": content
+              }
+            }
+        # 转发至目标地址
+        r = requests.post(url, headers=headers, data=json.dumps(d))
 ```
 
 ## 第 2 步：本地构建镜像
