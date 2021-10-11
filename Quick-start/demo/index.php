@@ -11,7 +11,7 @@
 <h2>前置步骤</h2>
 <p>本示例将输出由物联网开发平台所转发的设备状态数据。请确认完成如下前置步骤：</p>
 <p>步骤1：通过 <a href="https://console.cloud.tencent.com/iotexplorer">物联网开发平台</a> 的 <a href="https://cloud.tencent.com/document/product/1081/34739">产品开发</a> 功能完成产品的开发；</p>
-<p>步骤2：通过 <a href="https://console.cloud.tencent.com/iotexplorer">物联网开发平台</a> 的 <a href="https://cloud.tencent.com/document/product/1081/40298">数据同步</a> 或 <a href="https://cloud.tencent.com/document/product/1081/40292">数据开发</a> 功能将设备状态转发至如下url：</p>
+<p>步骤2：通过 <a href="https://console.cloud.tencent.com/iotexplorer">物联网开发平台</a> 的 <a href="https://cloud.tencent.com/document/product/1081/61105">规则引擎</a> 或 <a href="https://cloud.tencent.com/document/product/1081/61138">数据开发</a> 功能将设备状态转发至如下url：</p>
 <script>
 if (document.URL.endsWith("/")) {
     document.write(document.URL+"post.php");
