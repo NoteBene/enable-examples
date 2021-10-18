@@ -135,7 +135,7 @@
 
    接着点击「显示高级选项」，在「requirements.txt」输入框中输入`tencentcloud-sdk-python`。这样在执行该阶段时将自动 pip 安装`tencentcloud-sdk-python`，使得 Python 脚本能够正常执行。
 
-   ![image-20211015200619747](https://main.qcloudimg.com/raw/1c9c1850e7143fdeb53151c6d4bd95d9.png)
+   ![image-20211015200619747](https://main.qcloudimg.com/raw/339755ad76a2a106c5ac5f2d74047a75.png)
 
 6. 在上一步中我们完成了 Python 脚本，但其中的环境变量还没完全定义。
 
@@ -145,7 +145,7 @@
 
    - ServerName：自研节点的服务名称。可于自研节点控制台查看。
 
-     ![image-20211018104308091](https://main.qcloudimg.com/raw/1c9c1850e7143fdeb53151c6d4bd95d9.png)
+     ![image-20211018104308091](https://main.qcloudimg.com/raw/2c565955642d5e958a648c13f73fef0e.png)
 
    - SecretId：通过腾讯云官网获取的 [云 API 密钥](https://console.cloud.tencent.com/cam/capi)。
 
@@ -166,3 +166,10 @@
 
    ![image-20211018104915679](https://main.qcloudimg.com/raw/1c9c1850e7143fdeb53151c6d4bd95d9.png)
 
+## MORE
+
+至此，我们已经完整构建了 SaaS 托管的自动化部署工作流，在每次更新代码的时候实现自动更新版本。
+
+当然，本例只是最简单的一个案例，在正式的开发流程中我们还要根据自身业务需求调整该工作流，例如规范发布分支、添加人工确认环境、添加检查脚本、优化部署脚本、优化构建节点等等，使得该工作流能够胜任业务的要求，能够让开发团队流畅协同开发。更多内容可持续关注 [CODING](https://coding.net/) 。
+
+![image-20211018113325209](https://main.qcloudimg.com/raw/e0b7279594e86e53b51e08b13675955e.png)
