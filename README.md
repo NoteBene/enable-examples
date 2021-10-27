@@ -15,7 +15,7 @@ Enable应用案例库
 - [Python示例 - 部署PyTorch模型](https://github.com/NoteBene/enable-examples/tree/main/Applications/Pytorch-web-app)
 - [Python示例 - IoT设备数据转发至企业微信](https://github.com/NoteBene/enable-examples/tree/main/Applications/Python-post)
 - [CI/CD - 使用CODING实现SaaS托管自动化部署](https://github.com/NoteBene/enable-examples/blob/main/Applications/CICD-CODING/CICD-%E4%BD%BF%E7%94%A8CODING%E5%AE%9E%E7%8E%B0SaaS%E6%89%98%E7%AE%A1%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2.md)
-- [自研节点挂载文件存储CFS](https://github.com/NoteBene/enable-examples/blob/main/Applications/Enable-CSF/%E8%87%AA%E7%A0%94%E8%8A%82%E7%82%B9%E6%8C%82%E8%BD%BD%E6%96%87%E4%BB%B6%E5%AD%98%E5%82%A8CFS.md)
+- [CFS - 自研节点挂载文件存储CFS](https://github.com/NoteBene/enable-examples/blob/main/Applications/Enable-CSF/%E8%87%AA%E7%A0%94%E8%8A%82%E7%82%B9%E6%8C%82%E8%BD%BD%E6%96%87%E4%BB%B6%E5%AD%98%E5%82%A8CFS.md)
 
 ## 友情提示
 
