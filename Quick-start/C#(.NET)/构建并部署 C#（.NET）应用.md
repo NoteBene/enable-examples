@@ -10,7 +10,7 @@ cd helloworld-csharp
 
 2. 更新 `Program.cs` 中的 `CreateHostBuilder` 定义，侦听 `80` 端口：
 
-```
+``` csharp
 using System;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
@@ -39,7 +39,7 @@ namespace helloworld_csharp
 }
 ```
 3. 将 `Startup.cs` 的内容更新为如下：
-```
+``` csharp
 using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
