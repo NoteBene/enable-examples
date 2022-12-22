@@ -118,11 +118,9 @@ COPY --from=build /app ./
 # RUN apk add --no-cache icu-libs
 
 ENTRYPOINT ["./aspnetapp"]
-:::
-</dx-codeblock>
+```
 2. 添加一个 `.dockerignore` 文件，以从容器映像中排除文件：
-<dx-codeblock>
-:::  docker
+```
 **/obj/
 **/bin/
 ```
@@ -133,11 +131,9 @@ ENTRYPOINT ["./aspnetapp"]
 1. 如果您本地已经安装了 Docker，可以运行以下命令，在本地构建 Docker 镜像：
 ```
 docker build -t helloworld-csharp
-:::
-</dx-codeblock>
+```
 2. 构建成功后，运行 `docker images`，可以看到构建出的镜像，随后您可以将此镜像上传至您的镜像仓库。
-<dx-codeblock>
-:::  sh
+```
 REPOSITORY          TAG       IMAGE ID         CREATED            SIZE
 helloworld-csharp   latest    1c8dfb88c823     8 seconds ago      105MB
 ```
