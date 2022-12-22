@@ -2,15 +2,15 @@
 
 
 1. 安装 [.NET Core SDK 3.1](https://www.microsoft.com/net/core)。在 Console 中，使用 dotnet 命令新建一个空 Web 项目：
-<dx-codeblock>
-:::  plaintext
+
+``` plaintext
 dotnet new web -o helloworld-csharp
 cd helloworld-csharp
-:::
-</dx-codeblock>
+```
+
 2. 更新 `Program.cs` 中的 `CreateHostBuilder` 定义，侦听 `80` 端口：
-<dx-codeblock>
-:::  csharp
+
+```
 using System;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
@@ -37,11 +37,9 @@ namespace helloworld_csharp
         }
     }
 }
-:::
-</dx-codeblock>
+```
 3. 将 `Startup.cs` 的内容更新为如下：
-<dx-codeblock>
-:::  csharp
+```
 using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -79,17 +77,14 @@ namespace helloworld_csharp
         }
     }
 }
-:::
-</dx-codeblock>
-<dx-alert infotype="explain" title="">
+```
 以上代码会创建一个基本的 Web 服务器，并监听 `80` 端口。
-</dx-alert>
+
 
 ## 第 2 步：将应用容器化
 
 1. 在项目根目录下，创建一个名为 `Dockerfile` 的文件，内容如下：
-<dx-codeblock>
-:::  docker
+```
 FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tencent.com/g' /etc/apk/repositories
 WORKDIR /source
@@ -130,15 +125,13 @@ ENTRYPOINT ["./aspnetapp"]
 :::  docker
 **/obj/
 **/bin/
-:::
-</dx-codeblock>
+```
 
 
 ## 第 3 步：本地构建镜像
 
 1. 如果您本地已经安装了 Docker，可以运行以下命令，在本地构建 Docker 镜像：
-<dx-codeblock>
-:::  sh
+```
 docker build -t helloworld-csharp
 :::
 </dx-codeblock>
@@ -147,9 +140,7 @@ docker build -t helloworld-csharp
 :::  sh
 REPOSITORY          TAG       IMAGE ID         CREATED            SIZE
 helloworld-csharp   latest    1c8dfb88c823     8 seconds ago      105MB
-:::
-</dx-codeblock>
-
+```
 
 随后您可以将此镜像上传至您的镜像仓库。
 
